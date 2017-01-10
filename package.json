@@ -1,0 +1,27 @@
+{
+  "name": "express-lambda-invoker",
+  "version": "0.2.3",
+  "description": "A wrapper of lambda-invoker as an express middleware",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/.bin/mocha ./tests/*.js",
+    "test-travis": "istanbul cover ./node_modules/mocha/bin/_mocha -- -R spec ./tests/*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Palmabit-IT/express-lambda-invoker.git"
+  },
+  "keywords": [
+    "express",
+    "middleware",
+    "aws",
+    "lambda",
+    "invoke"
+  ],
+  "author": "Palmabit <hello@palmabit.com> (http://www.palmabit.com/)",
+  "license": "MIT",
+  "dependencies": {
+    "aws-sdk": "^2.7.21",
+    "lambda-invoker": "0.2.3"
+  }
+}
