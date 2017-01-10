@@ -18,9 +18,10 @@ const expressLambdaInvoker = require('express-lambda-invoker')
 const lambdaArn = 'arn:aws:lambda:...'
 
 const options = {
+  region: 'eu-west-1', // default eu-west-1
   accessKeyId: 'aws access key id...',
   secretAccessKey: 'aws secret access key...',
-  payloadAttrName: 'reqObjectAttribute',
+  payloadAttrName: 'reqObjectAttribute'
 }
 
 const invokerMiddleware = expressLambdaInvoker(lambdaArn, options)
@@ -33,6 +34,8 @@ router.route('/route-name')
       // others middlewares
     )
 ```
+
+The payload that is sent to Lambda is `req[options.payloadAttrName]`. The Lambda's response is replaced to that attribute. If not present is used `req.body`.
 
 ## Author
 
