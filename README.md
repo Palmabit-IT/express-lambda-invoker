@@ -35,7 +35,7 @@ router.route('/route-name')
     )
 ```
 
-The payload that is sent to Lambda is `req[options.payloadAttrName]`. The Lambda's response is replaced to that attribute. If not present is used `req.body`.
+The payload that is sent to Lambda is `req[options.payloadAttrName]`. The Lambda's response is replaced to that attribute. If not present `req.body` is used.
 
 ## Author
 
